@@ -40,7 +40,6 @@ char *mystrcat( char *dest, char *source){
     source++;
     pointer++;
   }
-  *pointer = '\0';
   return dest;
 }
 
