@@ -15,6 +15,25 @@ int mystrlen(char *s){
   return counter;
 }
 
+char *mystrncpy(char *dest, char *source, int n){
+  int counter = 0;
+  while(*source != '\0' && counter < n){
+    *dest = *source;
+    dest++;
+    source++;
+    counter++;
+  }
+  while (counter < n){
+    *dest = '\0';
+    counter++;
+  }
+  return dest-counter;
+}
+
+char *mystrcat( char *dest, char *source){
+
+}
+
 int mystrcmp(char *s1, char *s2) {
     while ((*s1 == *s2) && *s1 != '\0') {
         *s1++;
@@ -36,20 +55,25 @@ char *mystrchr(char *s, char c){
   while (*cPointer != c && *cPointer != '\0'){
     cPointer++;
   }
-  return cPointer;
+  if (*cPointer == c){
+    return cPointer;
+  }
+  else{
+    return '\0';
+  }
 }
 
-int main(){
-  // char s1 [5] = "Bnt";
-  // char s2 [5] = "Ant";
-  // char s3 [5] = "Ant";
-  // char s4 [5] = "Ants";
-  // printf("the result of %s vs %s is %d \n",s1,s2,mystrcmp(s1,s2));
-  // printf("the correct result is %d \n",strcmp(s1,s2));
-  // printf("the result of %s vs %s is %d \n",s2,s1,mystrcmp(s2,s1));
-  // printf("the correct result is %d \n",strcmp(s2,s1));
-  // printf("the result of %s vs %s is %d \n",s2,s3,mystrcmp(s2,s3));
-  // printf("the correct result is %d \n",strcmp(s2,s3));
-  // printf("the result of %s vs %s is %d \n",s2,s4,mystrcmp(s2,s4));
-  // printf("the correct result is %d \n",strcmp(s2,s4));
-}
+// int main(){
+//   // char s1 [5] = "Bnt";
+//   // char s2 [5] = "Ant";
+//   // char s3 [5] = "Ant";
+//   // char s4 [5] = "Ants";
+//   // printf("the result of %s vs %s is %d \n",s1,s2,mystrcmp(s1,s2));
+//   // printf("the correct result is %d \n",strcmp(s1,s2));
+//   // printf("the result of %s vs %s is %d \n",s2,s1,mystrcmp(s2,s1));
+//   // printf("the correct result is %d \n",strcmp(s2,s1));
+//   // printf("the result of %s vs %s is %d \n",s2,s3,mystrcmp(s2,s3));
+//   // printf("the correct result is %d \n",strcmp(s2,s3));
+//   // printf("the result of %s vs %s is %d \n",s2,s4,mystrcmp(s2,s4));
+//   // printf("the correct result is %d \n",strcmp(s2,s4));
+// }
