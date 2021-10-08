@@ -31,18 +31,25 @@ int mystrcmp(char *s1, char *s2) {
     }
 }
 
+char *mystrchr(char *s, char c){
+  char *cPointer = s;
+  while (*cPointer != c && *cPointer != '\0'){
+    cPointer++;
+  }
+  return cPointer;
+}
+
 int main(){
-  char test[20] = "Hello";
-  char s1 [5] = "Bnt";
-  char s2 [5] = "Ant";
-  char s3 [5] = "Ant";
-  char s4 [5] = "Ants";
-  printf("the result of %s vs %s is %d \n",s1,s2,mystrcmp(s1,s2));
-  printf("the correct result is %d \n",strcmp(s1,s2));
-  printf("the result of %s vs %s is %d \n",s2,s1,mystrcmp(s2,s1));
-  printf("the correct result is %d \n",strcmp(s2,s1));
-  printf("the result of %s vs %s is %d \n",s2,s3,mystrcmp(s2,s3));
-  printf("the correct result is %d \n",strcmp(s2,s3));
-  printf("the result of %s vs %s is %d \n",s2,s4,mystrcmp(s2,s4));
-  printf("the correct result is %d \n",strcmp(s2,s4));
+  // char s1 [5] = "Bnt";
+  // char s2 [5] = "Ant";
+  // char s3 [5] = "Ant";
+  // char s4 [5] = "Ants";
+  // printf("the result of %s vs %s is %d \n",s1,s2,mystrcmp(s1,s2));
+  // printf("the correct result is %d \n",strcmp(s1,s2));
+  // printf("the result of %s vs %s is %d \n",s2,s1,mystrcmp(s2,s1));
+  // printf("the correct result is %d \n",strcmp(s2,s1));
+  // printf("the result of %s vs %s is %d \n",s2,s3,mystrcmp(s2,s3));
+  // printf("the correct result is %d \n",strcmp(s2,s3));
+  // printf("the result of %s vs %s is %d \n",s2,s4,mystrcmp(s2,s4));
+  // printf("the correct result is %d \n",strcmp(s2,s4));
 }
