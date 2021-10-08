@@ -31,7 +31,17 @@ char *mystrncpy(char *dest, char *source, int n){
 }
 
 char *mystrcat( char *dest, char *source){
-
+  char *pointer = dest;
+  while (*pointer != '\0'){
+    pointer++;
+  }
+  while(*source != '\0'){
+    *pointer = *source;
+    source++;
+    pointer++;
+  }
+  *pointer = '\0';
+  return dest;
 }
 
 int mystrcmp(char *s1, char *s2) {
